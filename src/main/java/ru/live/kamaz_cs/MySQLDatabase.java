@@ -8,7 +8,7 @@ public class MySQLDatabase {
     private static final String DB_CONNECTION = "jdbc:mysql://localhost/HomeWork3?useUnicode=true&serverTimezone=UTC&" +
             "useSSL=true&verifyServerCertificate=false";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Bolvanka_123";
+    private static final String DB_PASSWORD = "password";
 
     private static Connection conn;
     private static PreparedStatement ps;
