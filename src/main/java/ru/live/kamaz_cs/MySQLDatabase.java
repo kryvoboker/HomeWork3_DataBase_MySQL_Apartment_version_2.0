@@ -34,7 +34,6 @@ public class MySQLDatabase {
     }
 
     public void addFlat(Flat flat) throws SQLException {
-        conn.setAutoCommit(false);
         try {
             ps = conn.prepareStatement("insert into Flats (district, adress, area, rooms, price) " +
                     "values (?, ?, ?, ?, ?)");
