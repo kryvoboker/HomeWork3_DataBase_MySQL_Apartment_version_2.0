@@ -8,7 +8,7 @@ public class MySQLDatabase {
     private static final String DB_CONNECTION = "jdbc:mysql://localhost/HomeWork3?useUnicode=true&serverTimezone=UTC&" +
             "useSSL=true&verifyServerCertificate=false";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "password";
+    private static final String DB_PASSWORD = "Bolvanka_123";
 
     private static Connection conn;
     private static PreparedStatement ps;
@@ -45,18 +45,16 @@ public class MySQLDatabase {
                 ps.setInt(4, flat.getRooms());
                 ps.setInt(5, flat.getPrice());
                 ps.executeUpdate();
-                conn.commit();
             } finally {
                 ps.close();
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-            conn.rollback();
         }
     }
 
     public void closeConnection() throws SQLException {
-        if (conn != null) conn.close();
+        conn.close();
     }
 
     public void chooseParametr() throws SQLException {
